@@ -17,3 +17,10 @@ router.get("/", (req, res) => {
     res.send(`Dettagli del post ${id}`)
 })
 
+// DELETE /posts/:id
+router.delete("/:id", (req, res) => {
+    const { id } = req.params
+    res.send(`Elimina il post ${id}`)
+})
+
+// UPDATE /posts/:id
