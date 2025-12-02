@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 })
 
 // GET /posts/:id
-router.get("/", (req, res) => {
+router.get("/:id", (req, res) => {
     const { id } = req.params
     res.send(`Dettagli del post ${id}`)
 })
@@ -28,3 +28,5 @@ router.put("/:id", (req, res) => {
     const { id } = req.params
     res.send(`Modifica il post ${id}`)
 })
+
+module.exports = router
