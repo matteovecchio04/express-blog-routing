@@ -6,7 +6,14 @@ const posts = [
     { id: 2, title: 'Secondo post', content: 'Contenuto del secondo post' }
 ];
 
-// GET
+// GET /posts
 router.get("/", (req, res) => {
     res.send("Lista dei post")
 })
+
+// GET /posts/:id
+router.get("/", (req, res) => {
+    const { id } = req.params
+    res.send(`Dettagli del post ${id}`)
+})
+
