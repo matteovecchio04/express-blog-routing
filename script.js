@@ -1,32 +1,8 @@
 const express = require("express")
-const router = express.Router()
+const app = express()
+const port = 3000
 
 const posts = [
     { id: 1, title: 'Primo post', content: 'Contenuto del primo post' },
     { id: 2, title: 'Secondo post', content: 'Contenuto del secondo post' }
 ];
-
-// GET /posts
-router.get("/", (req, res) => {
-    res.send("Lista dei post")
-})
-
-// GET /posts/:id
-router.get("/:id", (req, res) => {
-    const { id } = req.params
-    res.send(`Dettagli del post ${id}`)
-})
-
-// DELETE /posts/:id
-router.delete("/:id", (req, res) => {
-    const { id } = req.params
-    res.send(`Elimina il post ${id}`)
-})
-
-// UPDATE /posts/:id
-router.put("/:id", (req, res) => {
-    const { id } = req.params
-    res.send(`Modifica il post ${id}`)
-})
-
-module.exports = router
