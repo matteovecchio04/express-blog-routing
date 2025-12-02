@@ -24,3 +24,7 @@ router.delete("/:id", (req, res) => {
 })
 
 // UPDATE /posts/:id
+router.put("/:id", (req, res) => {
+    const { id } = req.params
+    res.send(`Modifica il post ${id}`)
+})
